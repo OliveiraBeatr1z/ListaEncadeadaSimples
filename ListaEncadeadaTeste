@@ -1,0 +1,154 @@
+package listas.teste;
+
+import listas.ListaEncadeada;
+
+public class ListaEncadeadaTeste {
+
+	public static void main(String[] args) {
+
+//		testesIniciais();
+//		adicionaInicio();
+//		adicionaPosicao();
+//		removeInicio();
+//		removeFinal();
+//		removePosicao();
+//		buscaPosicao();
+//		buscaElemento();
+		
+		
+	}
+	
+	public static void buscaPosicao() {
+		
+		ListaEncadeada<Integer> lista = new ListaEncadeada<>();
+		
+		lista.adiciona(1); // 0
+		lista.adiciona(2); // 1
+		lista.adiciona(3); // 2
+		lista.adiciona(4); // 3
+		lista.adiciona(5); // 4
+		
+		System.out.println("Elemento na posiçã0: " + lista.buscaPorPosicao(2));
+		
+	}
+	
+	public static void buscaElemento() {
+		ListaEncadeada<Integer> lista = new ListaEncadeada<>();
+		
+		lista.adiciona(1); // 0
+		lista.adiciona(2); // 1
+		lista.adiciona(3); // 2
+		lista.adiciona(4); // 3
+		lista.adiciona(5); // 4
+		
+		System.out.println("Esse é o elemento buscado: " + lista.busca(2));
+	}
+	public static void removePosicao(){
+		
+		ListaEncadeada<Integer> lista = new ListaEncadeada<>();
+		
+		lista.adiciona(1); // 0
+		lista.adiciona(2); // 1
+		lista.adiciona(3); // 2
+		lista.adiciona(4); // 3
+		lista.adiciona(5); // 4
+		
+
+		System.out.println("Elemento removido: " + lista.remove(3));
+		System.out.println("Lista: " + lista);
+	}
+	
+	public static void removeFinal() {
+		ListaEncadeada<Integer> lista = new ListaEncadeada<>();
+		
+//		lista.removeFinal(); verificar se a lista está vazia
+		
+		lista.adiciona(1);
+		lista.adiciona(2);
+		lista.adiciona(3);
+		 
+		System.out.println("Elemento removido: " + lista.removeFinal());
+		System.out.println("Lista: " + lista);
+		
+		System.out.println("Elemento removido: " + lista.removeFinal());
+		System.out.println("Lista: " + lista);
+		
+		System.out.println("Elemento removido: " + lista.removeFinal());
+		System.out.println("Lista: " + lista);
+		
+	}
+	
+	public static void  removeInicio() {
+		
+		ListaEncadeada<Integer> lista  = new ListaEncadeada<>();
+//		lista.removeInicio(); // tem que dar uma exceção
+		
+		lista.adiciona(1);
+		lista.adiciona(2);
+		lista.adiciona(3);
+//		
+		System.out.println("Elemento removido: " + lista.removeInicio());
+		System.out.println("Lista: " + lista);
+		 
+	}
+	
+	public static void adicionaInicio() {
+		ListaEncadeada<Integer> lista  = new ListaEncadeada<>();
+		
+		lista.adicionaInicio(3);
+		lista.adicionaInicio(2);
+		lista.adicionaInicio(1);
+		
+		System.out.println(lista);
+		
+	}
+	
+	public static void adicionaPosicao() {
+		ListaEncadeada<Integer> lista  = new ListaEncadeada<>();
+//		lista.adiciona(-1, 1); // tem que dar uma exceção
+		lista.adiciona(1); // só add o elemento
+		lista.adiciona(2);
+		lista.adiciona(4); // 1, 2, 4
+		
+//		lista.adiciona(5, 0); // posição cinco e elemento zero - da execção
+		lista.adiciona(0, 0); // add no começo da lista
+		lista.adiciona(4, 5);// 0, 1, 2, 4, 5 add no fim da lista
+		lista.adiciona(2, 3); // add no meio da lista
+		System.out.println(lista); 
+	}
+	
+	public static void testesIniciais() {
+		ListaEncadeada<Integer> lista  = new ListaEncadeada<>();
+		
+//		adicionar elemento na lista
+		lista.adiciona(1);
+		
+//		mostrar lista
+		System.out.println("Tamanho = " + lista.getTamanho() + "\n");
+		System.out.println(lista);
+		
+		lista.adiciona(2);
+		System.out.println(lista);
+		
+		lista.adiciona(3);
+		System.out.println(lista + "\n");
+		
+//		lista.limpa();
+//		System.out.println(lista);
+		
+//		busca por elemento
+		System.out.println("******* Busca por elemento ********");
+		System.out.println(lista.busca(1));
+		System.out.println(lista.busca(2));
+		System.out.println(lista.busca(3) + "\n");
+		
+//		busca por posicao
+		System.out.println("******* Busca por posicao ********");
+		System.out.println(lista.buscaPorPosicao(0));
+		System.out.println(lista.buscaPorPosicao(1));
+		System.out.println(lista.buscaPorPosicao(2));
+//		System.out.println(lista.buscaPorPosicao(-1));
+//		System.out.println(lista.buscaPorPosicao(4));
+	}
+
+}
